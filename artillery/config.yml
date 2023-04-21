@@ -1,0 +1,15 @@
+config:
+  target: https://simse.dev
+  # Enable the Playwright engine:
+  engines:
+    playwright:
+      launchOptions:
+        headless: true
+  processor: "./flows.js"
+  phases:
+    - duration: 100
+      arrivalRate: 2
+scenarios:
+  - engine: playwright
+    flowFunction: "helloFlow"
+    flow: []
